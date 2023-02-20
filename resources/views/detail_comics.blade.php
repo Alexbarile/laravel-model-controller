@@ -94,7 +94,7 @@
                         <p>Art by:</p> 
                     </div>
                     <div class="col-70">
-                        <a href="#null"> {{implode(', ', $comics['artists'])}} </a>
+                        <a href="#null"> {{$comics['artists']}} </a>
                     </div>
                 </div>
                 <div class="second-line d-flex justify-content-between align-self-baseline">
@@ -102,7 +102,7 @@
                         <p>Written by:</p> 
                     </div>
                     <div class="col-70">
-                        <a href="#null"> {{implode(', ', $comics['writers'])}} </a>
+                        <a href="#null"> {{$comics['writers']}} </a>
                     </div>
                 </div>
             </div>

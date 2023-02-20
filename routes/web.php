@@ -19,14 +19,11 @@ use App\Http\Controllers\ComicController as ComicController;
 
 // CHARACTERS
 
-Route::get('/characters', function () {
-    return view('characters');
-})->name('characters');
+Route::get('/characters}', [ComicController::class, 'characters'])->name('characters');
 
 // COMICS
 
-Route::get('comics/{id}', [ComicController::class, 'detailComics'])->name('detail-comics');
-
+Route::get('/comics/{id}', [ComicController::class, 'detailComics'])->name('detail-comics');
 
 // HOMEPAGE
 

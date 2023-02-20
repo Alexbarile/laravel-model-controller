@@ -16,7 +16,7 @@
             <div class="col">
                 @foreach($comics as $card)
                 <div class="album-card">
-                    <a href="/comics/{{$card['id']}}">
+                    <a href="/comics/{{$card['slug']}}">
                         <div class="card-img">
                             <img src="{{$card['thumb']}}" alt="">
                         </div>

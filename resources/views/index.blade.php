@@ -14,9 +14,9 @@
         </div>
         <div class="row">
             <div class="col">
-                @foreach($cards as $key => $card)
+                @foreach($comics as $card)
                 <div class="album-card">
-                    <a href="/comics/{{$key}}">
+                    <a href="/comics/{{$card['id']}}">
                         <div class="card-img">
                             <img src="{{$card['thumb']}}" alt="">
                         </div>

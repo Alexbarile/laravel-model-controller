@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+// richiamo il CONTROLLER
+
+use App\Http\Controllers\ComicController as ComicController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,35 +25,11 @@ Route::get('/characters', function () {
 
 // COMICS
 
-Route::get('/comics/{id}', function ($id) {    
-    $comics = config('db.cards');
-    $icon = config('db.icon');
-    $social = config('db.social');
-    foreach($comics as $key => $comic){
-        if($key == $id){
-            $single = $comic;
-        }
+Route::get('comics/{id}', [ComicController::class, 'detailComics'])->name('detail-comics');
 
-    // altro metodo con USE
-
-    // $comics = config('db.cards');
-    // $icon = config('db.icon');
-    // $social = config('db.social');
-    // $single = array_filter($comics, function($item) use($id)){
-    //     return $item['id'] == $id
-    // }
-
-
-    }
-    return view('detail_comics', compact('comics', 'icon', 'social', 'single'));
-})->name('detail-comics');
 
 // HOMEPAGE
 
-Route::get('/', function () {
-    $cards = config('db.cards');
-    $icon = config('db.icon');
-    $social = config('db.social');
+Route::get('/', [ComicController::class, 'index'])->name('homepage');
 
-    return view('index', compact('cards', 'icon', 'social'));
-})->name('homepage');
+

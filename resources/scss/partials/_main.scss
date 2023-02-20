@@ -1,0 +1,93 @@
+@import '../partials/mixins';
+@import '../partials/variables.scss';
+
+// MAIN
+
+main {
+
+    .black-bg {
+        background-color: rgb(31, 31, 31);
+
+        .container {
+            .row {
+                width: 100%;
+
+                .col-info {
+                    @include flex;
+                    justify-content: flex-start;
+                    position: relative;
+
+                    h4 {
+                        font-size: 25px;
+                        padding: 7px 40px;
+                        background-color: $blue;
+                        position: absolute;
+                        top: -27px;
+                        text-transform: uppercase;
+                        color: $white;
+                    }
+                }
+
+                .col {
+                    width: 100%;
+                    @include flex;
+                    align-items: baseline;
+                    @include wrap;
+                    padding-top: 30px;
+
+                    .album-card {
+                        width: calc(100% / 6);
+                        padding: 10px 10px;
+
+                        a {
+                            text-decoration: none;
+
+                            h3 {
+                                color: $white;
+                                font-size: 13px;
+                                margin-top: 10px;
+                                text-transform: uppercase;
+                            }
+
+                            .card-img {
+                                img {
+                                    width: 100%;
+
+                                    // per tagliare l'immagine 
+
+                                    height: 200px;
+                                    object-fit: cover;
+                                    object-position: top;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .col {
+            @include flex;
+            @include j-center;
+            @include a-center;
+
+            button {
+                padding: 7px 40px;
+                background-color: $blue;
+                border: none;
+                margin-bottom: 20px;
+
+                &:hover {
+                    box-shadow: 0 0 7px 5px rgba(255, 255, 255, 0.423);
+                }
+
+                a {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: $white;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

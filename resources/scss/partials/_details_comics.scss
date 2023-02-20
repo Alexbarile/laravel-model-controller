@@ -1,0 +1,165 @@
+@import '../partials/mixins';
+@import '../partials/variables.scss';
+
+// IMG COMIC
+
+.bg-blue {
+    width: 100%;
+    margin: 0 auto;
+    height: 80px;
+    background-color: $blue;
+
+    .row {
+
+        .col {
+            .card-img {
+                position: relative;
+
+                img {
+                    position: absolute;
+                    bottom: -10px;
+                    border: 1px solid white;
+                }
+
+                .type {
+                    position: absolute;
+                    text-transform: uppercase;
+                    color: $white;
+                    background-color: $azure;
+                    bottom: 242px;
+                    left: 1px;
+                    padding: 0px 6px 0px 6px;
+                }
+
+                a {
+                    p {
+                        position: absolute;
+                        text-transform: uppercase;
+                        color: $white;
+                        background-color: $azure;
+                        bottom: -25px;
+                        left: 1px;
+                        padding: 0px 39px 0px 41px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// SCHEDA COMIC
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+
+    .row {
+
+        // SX PART
+
+        .col-60 {
+            width: 60%;
+
+            h2 {
+                text-transform: uppercase;
+                font-size: 29px;
+            }
+
+            .container-info {
+                width: 100%;
+                margin: 0 auto;
+
+                .row {
+                    width: 100%;
+                    padding: 15px 0px 15px 0;
+                    margin: 0;
+                    background-color: $green;
+
+                    .col-70 {
+                        width: 70%;
+                        border-right: 1px solid rgb(62, 62, 62);
+
+                        p {
+                            margin: 0;
+                            color: $yellow;
+                            font-weight: 600;
+                        }
+                    }
+
+                    .col-30 {
+                        width: 30%;
+
+                        .nav-link {
+                            color: $white;
+
+                            &:hover {
+                                color: $yellow;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // DX PART
+
+        .col-40 {
+            width: 40%;
+
+            .content {
+                h5 {
+                    text-transform: uppercase;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+// INFO COMIC
+
+.container-gray {
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(238, 238, 238);
+    border-top: 1px solid rgb(208, 208, 208);
+
+    .row {
+
+        .col {
+
+            h4 {
+                border-bottom: 1px solid rgb(208, 208, 208);
+                padding-bottom: 30px;
+            }
+
+            .first-line {
+                border-bottom: 1px solid rgb(208, 208, 208);
+                padding-bottom: 8px;
+            }
+
+            .second-line {
+                border-bottom: 1px solid rgb(208, 208, 208);
+                padding-bottom: 8px;
+                padding-top: 8px;
+            }
+
+            .col-30 {
+                width: 30%;
+            }
+
+            .col-70 {
+                width: 70%;
+
+                a {
+                    text-decoration: none;
+                    color: $azure;
+
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+}

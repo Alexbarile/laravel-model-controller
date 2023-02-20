@@ -1,0 +1,160 @@
+@import '../partials/mixins';
+@import '../partials/variables.scss';
+
+// FOOTER
+
+// prima parte footer
+
+.bg-blu {
+    background-color: $blue;
+
+    .row {
+
+        ul {
+            @include flex;
+            @include j-between;
+            @include a-center;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            @include flex;
+            @include j-between;
+            @include a-center;
+            padding: 20px;
+        }
+
+        a {
+            color: $white;
+            font-weight: 300;
+            text-decoration: none;
+            @include flex;
+            @include j-center;
+            @include a-center;
+
+            img {
+                width: 60px;
+                padding: 10px;
+            }
+
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+// seconda parte footer
+
+.jumbo-2 {
+    background-image: url('../../img/footer-bg.jpg');
+    background-size: cover;
+    // non uscirà nulla perchè serve il contenuto
+
+    .row {
+        background-image: url('../../img/dc-logo-bg.png');
+        background-position: right center;
+        background-repeat: no-repeat;
+        @include flex;
+        @include j-between;
+        @include a-center;
+    }
+
+    .col {
+        padding: 20px;
+
+        div {
+            margin-right: 30px;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-size: 20px;
+            color: $white;
+            padding-top: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin-top: 10px;
+            margin: 0;
+            padding: 0;
+
+            a {
+                color: $gray;
+                text-decoration: none;
+                font-size: 13px;
+
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+
+        span {
+            color: $gray;
+            font-size: 13px;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// terza parte footer
+
+.social {
+    background-color: rgb(52, 52, 52);
+    height: 100px;
+
+    .container {
+        height: 100%;
+    }
+
+    .row {
+        @include flex;
+        @include j-between;
+        @include a-center;
+        height: 100%;
+    }
+
+    button {
+
+        font-size: 20px;
+        border: 2px solid $blue;
+        padding: 10px;
+        background-color: rgb(52, 52, 52);
+        text-transform: uppercase;
+        transition: 1s;
+
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+
+        &:hover {
+            scale: 1.2;
+        }
+    }
+
+    ul {
+        @include flex;
+        @include a-center;
+        margin: 0;
+        padding: 0;
+
+        h3 {
+            text-transform: uppercase;
+            color: $blue;
+            padding: 10px;
+            margin: 0;
+        }
+
+        li {
+            list-style-type: none;
+            padding: 10px;
+        }
+    }
+}

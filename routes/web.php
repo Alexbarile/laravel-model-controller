@@ -23,7 +23,7 @@ Route::get('/characters}', [ComicController::class, 'characters'])->name('charac
 
 // COMICS
 
-Route::get('/comics/{id}', [ComicController::class, 'detailComics'])->name('detail-comics');
+Route::get('/comics/{slug}', [ComicController::class, 'detailComics'])->name('detail-comics');
 
 // HOMEPAGE
 
